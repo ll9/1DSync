@@ -1,6 +1,6 @@
 ﻿namespace _1DSync
 {
-    partial class Form1
+    partial class MainView
     {
         /// <summary>
         /// Erforderliche Designervariable.
