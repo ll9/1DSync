@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1DSync.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,19 @@ namespace _1DSync
 {
     public partial class MainView : Form
     {
+        private MainController _controller;
+
         public MainView()
         {
             InitializeComponent();
+            _controller = new MainController(this);
+
+            dataGridView1.DataSource = _controller.GetDataSource();
+        }
+
+        private void SyncButton_Click(object sender, EventArgs e)
+        {
+            _controller.SaveChanges();
         }
     }
 }
