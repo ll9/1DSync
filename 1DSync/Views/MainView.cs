@@ -23,9 +23,14 @@ namespace _1DSync
             dataGridView1.DataSource = _controller.GetDataSource();
         }
 
-        private void SyncButton_Click(object sender, EventArgs e)
+        private void SaveButtonClicked(object sender, EventArgs e)
         {
             _controller.SaveChanges();
+        }
+
+        private void DevButton_Click(object sender, EventArgs e)
+        {
+            _controller.Dev();
         }
     }
 }
