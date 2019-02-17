@@ -182,6 +182,7 @@
     </Compile>
     <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
     <Compile Include="Models\PseudoDynamicEntity.cs" />
+    <Compile Include="Services\SyncService.cs" />
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>

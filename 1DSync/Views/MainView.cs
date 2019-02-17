@@ -1,4 +1,5 @@
 ﻿using _1DSync.Controllers;
+using _1DSync.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,7 @@ namespace _1DSync
         private void SyncButton_Click(object sender, EventArgs e)
         {
             _controller.SaveChanges();
+            _controller.Synchronize();
         }
     }
 }

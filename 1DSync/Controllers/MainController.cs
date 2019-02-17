@@ -1,5 +1,6 @@
 ﻿using _1DSync.Data;
 using _1DSync.Models;
+using _1DSync.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
@@ -14,12 +15,14 @@ namespace _1DSync.Controllers
     {
         private MainView _view;
         private ApplicationDbContext _context;
+        private SyncService _syncService;
 
         public MainController(MainView mainView)
         {
             _view = mainView;
             _context = new ApplicationDbContext();
             _context.Database.Migrate();
+            _syncService = new SyncService(_context);
         }
 
         internal object GetDataSource()
@@ -46,6 +49,11 @@ namespace _1DSync.Controllers
             }
 
             _context.SaveChanges();
+        }
+
+        internal void Synchronize()
+        {
+            _syncService.Synchronize();
         }
 
         internal void Dev()
