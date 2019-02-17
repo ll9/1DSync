@@ -32,5 +32,10 @@ namespace _1DSync
         {
             _controller.Dev();
         }
+
+        private void SyncButton_Click(object sender, EventArgs e)
+        {
+            _controller.SaveChanges();
+        }
     }
 }

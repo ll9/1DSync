@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SaveButton = new System.Windows.Forms.Button();
             this.DevButton = new System.Windows.Forms.Button();
+            this.SyncButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(660, 355);
+            this.SaveButton.Location = new System.Drawing.Point(565, 355);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 1;
@@ -62,11 +63,22 @@
             this.DevButton.UseVisualStyleBackColor = true;
             this.DevButton.Click += new System.EventHandler(this.DevButton_Click);
             // 
+            // SyncButton
+            // 
+            this.SyncButton.Location = new System.Drawing.Point(660, 355);
+            this.SyncButton.Name = "SyncButton";
+            this.SyncButton.Size = new System.Drawing.Size(75, 23);
+            this.SyncButton.TabIndex = 3;
+            this.SyncButton.Text = "Sync";
+            this.SyncButton.UseVisualStyleBackColor = true;
+            this.SyncButton.Click += new System.EventHandler(this.SyncButton_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 395);
+            this.Controls.Add(this.SyncButton);
             this.Controls.Add(this.DevButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.dataGridView1);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button DevButton;
+        private System.Windows.Forms.Button SyncButton;
     }
 }
 
