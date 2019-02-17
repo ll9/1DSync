@@ -170,6 +170,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ApplicationDbContext.cs" />
+    <Compile Include="Migrations\20190217185426_Init.cs" />
+    <Compile Include="Migrations\20190217185426_Init.designer.cs">
+      <DependentUpon>20190217185426_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
     <Compile Include="Models\PseudoDynamicEntity.cs" />
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
